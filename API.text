@@ -1,0 +1,32 @@
+Method:POST
+URL:/parking-boys
+request body:{"parkingBoyId":12,"parkingBoyName":"xiaoming","parkingBoyAge":18}
+response body:{"/parking-boys/12"}
+response code:201,500
+
+
+Method:GET
+URL:/parking-boys
+request body:{}
+response body:[{"parkingBoyId":12,"parkingBoyName":"xiaoming","parkingBoyAge":18},{"parkingBoyId":13,"parkingBoyName":"xiaoming","age":18}]
+response code:200,500
+
+
+Method:GET
+URL:/parking-boys/parking-boys-dto
+request body:{}
+response body:[{"parkingBoyId":12,"parkingBoyName":"xiaoming","parkingBoyAge":18,"parkingLots":[{"parkingLotId":1,"capacity":2,"availablePosition":1,"parkingBoyId":12},{"parkingLotId":2,"capacity":3,"availablePosition":1,"parkingBoyId":12}]},{"parkingBoyId":13,"parkingBoyName":"xiaoming","parkingBoyAge":18"parkingLot":[]}]
+response code:200,500
+
+
+Method:POST
+URL:/parking-lots
+request body:{"parkingLotId":2,"capacity":3,"availablePosition":1,"parkingBoyId":12}
+response body:{"/parking-lots/2"}
+response code:201,500
+
+Method:GET
+URL:/parking-lots
+request body:{}
+response body:[{"parkingLotId":1,"capacity":3,"availablePosition":1,"parkingBoyId":12},{"parkingLotId":2,"capacity":3,"availablePosition":1,"parkingBoyId":13}]
+response code:200,500

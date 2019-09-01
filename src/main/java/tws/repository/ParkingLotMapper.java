@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 public interface ParkingLotMapper {
-    void inserParkingLot(@Param("parkingLot")ParkingLot parkingLot);
+    void insertParkingLot(@Param("parkingLot")ParkingLot parkingLot);
     List<ParkingLot> selectAllParkingLot();
 
 }
